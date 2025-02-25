@@ -33,7 +33,8 @@ connectDB();
 const allowedOrigins = [
     'http://localhost:3006', // Local development - admin
     'http://localhost:3009', // Local development
-    
+    'https://admin-nine-gray.vercel.app',
+    'https://trang-chu-ivory.vercel.app'
 ];
 
 app.use(cors({
