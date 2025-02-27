@@ -35,7 +35,7 @@ const allowedOrigins = [
     'http://localhost:3009', // Local development
     'https://admin-nine-gray.vercel.app',
     'https://trang-chu-ivory.vercel.app',
-    'https://www.tigarboardgame.com',
+    'https://tigarboardgame.com',
     'https://admingame.tigarboardgame.com'
 ];
 
