@@ -84,7 +84,7 @@ const createOrder = async (req, res) => {
         const sendOrderConfirmationEmail = async (toEmail) => {
             // Tạo nội dung email với bảng sản phẩm
             const mailOptions = {
-                from: 'Khắc Tú',
+                from: 'Tigarboardgame',
                 to: toEmail,
                 subject: 'Xác nhận đơn hàng của bạn.',
                 html: `
@@ -121,7 +121,7 @@ const createOrder = async (req, res) => {
                             <p><strong>Địa chỉ nhận hàng:</strong> <span style="color: #34495e; font-style: italic;">${address}</span></p>
                             <br/>
                                                                                    
-                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://shopbandodientu.dokhactu.site" style="color: #3498db; text-decoration: none;">WebShop Khắc Tú</a></p>
+                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://tigarboardgame.com" style="color: #3498db; text-decoration: none;">Tigarboardgame</a></p>
                         </div>
                     `
             };
@@ -311,7 +311,7 @@ const createOrderThanhToanVNPay = async (req, res) => {
         const sendOrderConfirmationEmail = async (toEmail) => {
             // Tạo nội dung email với bảng sản phẩm
             const mailOptions = {
-                from: 'Khắc Tú',
+                from: 'Tigarboardgame',
                 to: toEmail,
                 subject: 'Xác nhận đơn hàng của bạn.',
                 html: `
@@ -348,7 +348,7 @@ const createOrderThanhToanVNPay = async (req, res) => {
                             <p><strong>Địa chỉ nhận hàng:</strong> <span style="color: #34495e; font-style: italic;">${address}</span></p>
                             <br/>
                                                                                    
-                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://shopbandodientu.dokhactu.site" style="color: #3498db; text-decoration: none;">WebShop Khắc Tú</a></p>
+                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://shopbandodientu.dokhactu.site" style="color: #3498db; text-decoration: none;">Tigarboardgame</a></p>
                         </div>
                     `
             };
