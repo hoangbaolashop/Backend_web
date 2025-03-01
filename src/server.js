@@ -35,11 +35,10 @@ const allowedOrigins = [
     'http://localhost:3006', // Local development - admin
     'http://localhost:3008', // Local development
     'http://localhost:3009', // Local development
-    'https://bandodientu-admin.vercel.app',
-    'https://bandodientu-kt-trangchu.vercel.app',
-    'https://admin-dodientu.dokhactu.site',
-    'https://shopbandodientu.dokhactu.site',
-    'https://backend-bandodientu-node.dokhactu.site'
+    'https://admin-nine-gray.vercel.app',
+    'https://trang-chu-ivory.vercel.app',
+    'https://tigarboardgame.com',
+    'https://admingame.tigarboardgame.com'
 ];
 
 app.use(cors({
