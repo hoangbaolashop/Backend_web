@@ -12,6 +12,7 @@ const orderRouter = require('./routes/orderRouter');
 const commentRouter = require('./routes/commentRouter');
 const hopQuaRouter = require('./routes/hopQuaRouter');
 const cauHoiRouter = require('./routes/cauHoiRouter');
+const thuegamelienhe = require('./routes/thuegamelienhe');
 const connectDB = require('./config/connectDB');
 const cors = require('cors');
 const multer = require('multer');
@@ -32,11 +33,13 @@ connectDB();
 // Cài đặt CORS
 const allowedOrigins = [
     'http://localhost:3006', // Local development - admin
+    'http://localhost:3008', // Local development
     'http://localhost:3009', // Local development
-    'https://admin-nine-gray.vercel.app',
-    'https://trang-chu-ivory.vercel.app',
-    'https://tigarboardgame.com',
-    'https://admingame.tigarboardgame.com'
+    'https://bandodientu-admin.vercel.app',
+    'https://bandodientu-kt-trangchu.vercel.app',
+    'https://admin-dodientu.dokhactu.site',
+    'https://shopbandodientu.dokhactu.site',
+    'https://backend-bandodientu-node.dokhactu.site'
 ];
 
 app.use(cors({
@@ -77,6 +80,7 @@ const routes = [
     { path: '/api/comment', router: commentRouter },
     { path: '/api/hopqua', router: hopQuaRouter },
     { path: '/api/cauhoi', router: cauHoiRouter },
+    { path: '/api/lienhethuegame', router: thuegamelienhe },
 ];
   
 routes.forEach(route => app.use(route.path, route.router));
