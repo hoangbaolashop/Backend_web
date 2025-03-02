@@ -134,9 +134,9 @@ module.exports = {
             const skip = (pageNumber - 1) * limitNumber;
 
             // tang/giam
-            let sortOrder = 1; // tang dn
+            let sortOrder = -1; // tang dn
             if (order === 'desc') {
-                sortOrder = -1; 
+                sortOrder = 1; 
             }
 
             // Tạo query tìm kiếm
