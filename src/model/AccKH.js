@@ -4,6 +4,11 @@ const AccKH_Schema = new mongoose.Schema({
         email: { type: String },
         password: { type: String,  },
         fullName: { type: String, default: "Khắc tú"  },        
+        hangTV: { 
+            type: String, 
+            enum: ["Bạc", "Vàng", "Bạch Kim", "Kim Cương"], 
+            default: "Bạc" 
+        },      
         address: { type: String },        
         phone: { type: String },        
         gender: { type: Boolean, default: true},        
@@ -13,7 +18,7 @@ const AccKH_Schema = new mongoose.Schema({
         otp: { type: Number },  // Thêm trường lưu mã OTP
         otpExpires: { type: Date },  // Thêm trường lưu thời gian hết hạn mã OTP
         isActive: { type: Boolean, default: false},        // Trạng thái tài khoản
-        quayMayManCount: { type: Number, default: 1 },     // Thêm trường quay may mắn
+        quayMayManCount: { type: Number, default: 3 },     // Thêm trường quay may mắn
     },
     { 
         timestamps: true,   // createAt, updateAt
