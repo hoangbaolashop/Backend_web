@@ -10,7 +10,7 @@ module.exports = {
 
     getAccKH: async (req, res) => {
         try {
-            const { page, limit, fullName } = req.query; 
+            const { page, limit, fullName, hangTV } = req.query; 
     
             // Chuyển đổi thành số
             const pageNumber = parseInt(page, 10);
@@ -34,6 +34,9 @@ module.exports = {
                 }).flat();  // flat() để biến các mảng lồng vào thành một mảng phẳng
             
                 query.$and = searchKeywords;  // Dùng $and để tìm tất cả các từ khóa
+            }
+            if (hangTV) {               
+                query.hangTV = hangTV
             }
     
             let accKH = await AccKH.find(query).populate("IdVoucher").skip(skip).limit(limitNumber).lean();  // Trả về object thuần JavaScript
