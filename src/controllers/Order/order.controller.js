@@ -142,22 +142,23 @@ const createOrder = async (req, res) => {
             const mailOptions = {
                 from: 'tigarboardgame',
                 to: toEmail,
-                subject: '🎉 Xác nhận đơn hàng của bạn! 🎉',
+                subject: 'Bạn đã đặt hàng thành công tại Tigarboardgame',
                 html: `
                     <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                        <h2 style="text-align: center; color: #2c3e50; font-size: 24px;">💖 Cảm ơn bạn đã đặt hàng! 💖</h2>
+                        <h2 style="text-align: center; color: #2c3e50; font-size: 24px;"> Cảm ơn bạn đã đặt hàng tại Tigarboardgame! </h2>
                         <p style="color: #34495e; font-size: 18px;">Xin chào <span style="color: #e74c3c; font-weight: bold; font-style: italic;">${lastName} ${firstName}</span>,</p>
-                        <p style="font-size: 16px;">🎊 Đơn hàng của bạn đã được xác nhận! 🎊</p>
-                        
-                        <h3 style="color: #2c3e50; font-size: 20px; text-align: center;">🛒 Thông tin sản phẩm đã đặt hàng 🛍️</h3>                                        
+                        <p style="font-size: 16px;"> Đơn hàng của bạn đã được gửi tới bộ phận xử lý Tigar. Vui lòng nhắn tin đến Zalo 092.616.9274 nếu cần hỗ trợ gấp </p>
+                        <p><strong>📞 Số điện thoại:</strong> ${phone}</p>
+                        <p><strong>🏠 Địa chỉ nhận hàng:</strong> <span style="color: #34495e; font-style: italic;">${address}</span></p>
+                        <h3 style="color: #2c3e50; font-size: 20px; text-align: center;"> Thông tin sản phẩm đã đặt hàng </h3>                                        
                         <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; margin-bottom: 20px; background-color: #ffffff;">
                             <thead>
                                 <tr>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">📦 Tên sản phẩm</th>
-                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">⚙️ Cấu hình</th>
-                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">🔢 Số lượng</th>
-                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">💰 Đơn giá</th>
-                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">🧾 Tổng tiền</th>
+                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Phân loại</th>
+                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Số lượng</th>
+                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Đơn giá</th>
+                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Tổng tiền</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -167,17 +168,16 @@ const createOrder = async (req, res) => {
         
                         <div style="background-color: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
                             <p><strong>📦 Tổng số lượng đặt:</strong> <span style="color: #2980b9;">${tongSoLuong}</span> sản phẩm</p>
-                            <p><strong>💰 Tổng tiền:</strong> <span style="color: #e74c3c;">${formatCurrency(thanhTien)}</span></p>
+                            
                             <p><strong>🚚 Phí giao hàng:</strong> <span style="color: #2ecc71;">Miễn phí cho đơn mua từ 300k</span></p>
-                            <p><strong>🎁 Giảm giá:</strong> <span style="color: #e67e22;">-${formatCurrency(soTienGiamGia)}</span> (${giamGia}%)</p>
-                            <p><strong>💵 Số tiền cần thanh toán:</strong> <span style="color: #e74c3c; font-weight: bold;">${formatCurrency(soTienCanThanhToan)}</span></p>
+                            
+                            <p><strong>💵 Tổng đơn hàng:</strong> <span style="color: #e74c3c; font-weight: bold;">${formatCurrency(soTienCanThanhToan)}</span></p>
                         </div>
             
-                        <p><strong>📞 Số điện thoại:</strong> ${phone}</p>
-                        <p><strong>🏠 Địa chỉ nhận hàng:</strong> <span style="color: #34495e; font-style: italic;">${address}</span></p>
+                        
                         <br/>
                                                                
-                        <p style="text-align: center; font-size: 16px;">📦 Bạn có thể theo dõi đơn hàng tại <a href="https://tigarboardgame.com" style="color: #3498db; text-decoration: none; font-weight: bold;">tigarboardgame</a></p>
+                        <p style="text-align: center; font-size: 16px;">📦 Bạn có thể theo dõi đơn hàng tại <a href="https://tigarboardgame.com/myaccount" style="color: #3498db; text-decoration: none; font-weight: bold;">trang tài khoản của bạn</a></p>
                     </div>
                 `
             };
