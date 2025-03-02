@@ -168,7 +168,7 @@ const createOrder = async (req, res) => {
                         <div style="background-color: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
                             <p><strong>📦 Tổng số lượng đặt:</strong> <span style="color: #2980b9;">${tongSoLuong}</span> sản phẩm</p>
                             <p><strong>💰 Tổng tiền:</strong> <span style="color: #e74c3c;">${formatCurrency(thanhTien)}</span></p>
-                            <p><strong>🚚 Phí giao hàng:</strong> <span style="color: #2ecc71;">Miễn phí</span></p>
+                            <p><strong>🚚 Phí giao hàng:</strong> <span style="color: #2ecc71;">Miễn phí cho đơn mua từ 300k</span></p>
                             <p><strong>🎁 Giảm giá:</strong> <span style="color: #e67e22;">-${formatCurrency(soTienGiamGia)}</span> (${giamGia}%)</p>
                             <p><strong>💵 Số tiền cần thanh toán:</strong> <span style="color: #e74c3c; font-weight: bold;">${formatCurrency(soTienCanThanhToan)}</span></p>
                         </div>
@@ -232,7 +232,7 @@ const createOrder = async (req, res) => {
                         <div style="background-color: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
                             <p><strong>📌 Tổng số lượng:</strong> <span style="color: #2980b9;">${tongSoLuong}</span> sản phẩm</p>
                             <p><strong>💰 Tổng tiền:</strong> <span style="color: #e74c3c;">${formatCurrency(thanhTien)}</span></p>
-                            <p><strong>🚚 Phí giao hàng:</strong> <span style="color: #2ecc71;">Miễn phí</span></p>
+                            <p><strong>🚚 Phí giao hàng:</strong> <span style="color: #2ecc71;">Miễn phí cho đơn mua từ 300k</span></p>
                             <p><strong>🎁 Giảm giá:</strong> <span style="color: #e67e22;">-${formatCurrency(soTienGiamGia)}</span> (${giamGia}%)</p>
                             <p><strong>💳 Số tiền cần thanh toán:</strong> <span style="color: #e74c3c;">${formatCurrency(soTienCanThanhToan)}</span></p>
                         </div>
