@@ -679,10 +679,10 @@ const updateCongTienKhiNap = async (req, res) => {
             if (order.soTienCanThanhToan !== sePayWebhookData.transferAmount) {
                 res.status(404).json({ message: "Số tiền thanh toán không khớp" });
             }
-                            
+
             const updatedUser = await Order.findOneAndUpdate(
-                // { _id: idUser },
-                { _id: idUser },
+                // { _id: idOrder },
+                { _id: idOrder },
                 {
                     $set: { TinhTrangThanhToan: "Đã Thanh Toán" },
                     $push: {
