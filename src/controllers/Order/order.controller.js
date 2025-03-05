@@ -672,12 +672,12 @@ const updateCongTienKhiNap = async (req, res) => {
             // Tìm đơn hàng trong database
             const order = await Order.findById(idOrder).session(session);
             if (!order) {
-                res.status(404).json({ message: "Không tìm thấy đơn hàng." });
+                return res.status(404).json({ message: "Không tìm thấy đơn hàng." });
             }
 
             // Kiểm tra số tiền thanh toán có khớp với số tiền cần thanh toán không
             if (order.soTienCanThanhToan !== sePayWebhookData.transferAmount) {
-                res.status(404).json({ message: "Số tiền thanh toán không khớp" });
+                return res.status(404).json({ message: "Số tiền thanh toán không khớp" });
             }
 
             const updatedUser = await Order.findOneAndUpdate(
