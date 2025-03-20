@@ -272,7 +272,7 @@ module.exports = {
             }
 
             const orderStatusColor = {
-                "Chưa giao hàng": "#95a5a6",   // Màu xám
+                "Tigar đang xử lý": "#95a5a6",   // Màu xám
                 "Đang giao hàng": "#f39c12",    // Màu vàng
                 "Đã giao hàng": "#2ecc71",     // Màu xanh
             };

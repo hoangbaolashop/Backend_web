@@ -84,8 +84,8 @@ var orderSchema = new mongoose.Schema({
   // ID khách hàng (nếu có)
   TinhTrangDonHang: {
     type: String,
-    "enum": ["Chưa giao hàng", "Đã giao hàng", "Đang giao hàng"],
-    "default": "Chưa giao hàng"
+    "enum": ["Tigar đang xử lý", "Đã giao hàng", "Đang giao hàng"],
+    "default": "Tigar đang xử lý"
   },
   TinhTrangThanhToan: {
     type: String,
